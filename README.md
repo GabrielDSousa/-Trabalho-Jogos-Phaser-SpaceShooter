@@ -26,6 +26,12 @@
      game.load.image('ship', 'assets/player.png');
  }
  ```
+ - Making the backgorund move, to create a illusion of movement
+ ```
+ function update() {
+    starfield.tilePosition.y +=2;
+}
+ ```
  ## Work in progress
  
  ## Built With
