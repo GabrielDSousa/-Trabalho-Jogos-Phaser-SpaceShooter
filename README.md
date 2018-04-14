@@ -1,4 +1,4 @@
-#Space Shooter game with phaser
+# Space Shooter game with phaser
 
  - Preparing the code with the right dependencies
  At the html file
