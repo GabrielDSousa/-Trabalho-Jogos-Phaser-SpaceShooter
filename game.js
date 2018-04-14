@@ -16,6 +16,8 @@ function create() {
     player.anchor.setTo(0.5, 0.5);
 }
 function update() {
+    //Criando ilusão de movimento com o fundo movimentandio
+    starfield.tilePosition.y +=2;
 }
 function render() {
 }
