@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b5525162-b9dc-4443-afb1-f72aaf8025f2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/states/FirstGameStateEasy.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/states/FirstGameStateEasy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/states/FirstGameStateHard.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/states/FirstGameStateHard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/states/FirstGameStateMedium.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/states/FirstGameStateMedium.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/states/MenuGameState.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/states/MenuGameState.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,10 +14,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FirstGameStateEasy.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FirstGameStateEasy.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/states/FirstGameStateEasy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="710">
+            <state relative-caret-position="-4223">
               <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
             </state>
           </provider>
@@ -43,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuGameState.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MenuGameState.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/states/MenuGameState.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="766">
-              <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="47" />
+            <state relative-caret-position="205">
+              <caret line="26" column="95" selection-start-line="26" selection-start-column="95" selection-end-line="26" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -96,7 +94,6 @@
       <find>//</find>
       <find>FirstGameState</find>
       <find>You</find>
-      <find>this.state.start('FirstGameStateHard');</find>
       <find>launchBlueEnemy</find>
       <find>gameOver</find>
       <find>setRes</find>
@@ -104,6 +101,7 @@
       <find>setRe</find>
       <find>setReset</find>
       <find>restart</find>
+      <find>this.state.start('FirstGameStateHard');</find>
     </findStrings>
     <replaceStrings>
       <replace>FirstGameStateMedium</replace>
@@ -127,10 +125,10 @@
         <option value="$PROJECT_DIR$/js/states/Menu.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/states/MenuGameState.js" />
         <option value="$PROJECT_DIR$/js/states/FirstGameStateMedium.js" />
         <option value="$PROJECT_DIR$/js/states/FirstGameStateHard.js" />
         <option value="$PROJECT_DIR$/js/states/FirstGameStateEasy.js" />
+        <option value="$PROJECT_DIR$/js/states/MenuGameState.js" />
       </list>
     </option>
   </component>
@@ -143,7 +141,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1087" />
@@ -231,12 +229,12 @@
       <workItem from="1526736695641" duration="14103000" />
       <workItem from="1526763543144" duration="13829000" />
       <workItem from="1526819218891" duration="22095000" />
-      <workItem from="1527544333393" duration="10880000" />
+      <workItem from="1527544333393" duration="11811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79608000" />
+    <option name="totallyTimeSpent" value="80539000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -485,24 +483,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/states/MenuGameState.js">
+    <entry file="file://$PROJECT_DIR$/js/states/FirstGameStateEasy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="10" lean-forward="true" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/states/FirstGameStateMedium.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="384" column="110" selection-start-line="384" selection-start-column="110" selection-end-line="384" selection-end-column="110" />
+        <state relative-caret-position="-4223">
+          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
         </state>
       </provider>
     </entry>
@@ -513,10 +497,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/states/FirstGameStateEasy.js">
+    <entry file="file://$PROJECT_DIR$/js/states/FirstGameStateMedium.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
+        <state relative-caret-position="387">
+          <caret line="384" column="110" selection-start-line="384" selection-start-column="110" selection-end-line="384" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="10" lean-forward="true" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/states/MenuGameState.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="26" column="95" selection-start-line="26" selection-start-column="95" selection-end-line="26" selection-end-column="95" />
         </state>
       </provider>
     </entry>

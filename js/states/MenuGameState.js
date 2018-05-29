@@ -18,13 +18,13 @@ SpaceShooter.MenuState = {
 
         background = this.game.add.tileSprite(0, 0, 2000, 2000, 'background');
 
-        easy = this.game.add.button(this.game.world.centerX - 95, 600, 'button', this.loadEasy, this, 2, 1, 0);
+        easy = this.game.add.button(this.game.world.centerX - 95, this.game.world.centerY + 93, 'button', this.loadEasy, this, 2, 1, 0);
 
 
-        medium = this.game.add.button(this.game.world.centerX - 95, 700, 'button', this.loadMedium, this, 2, 1, 0);
+        medium = this.game.add.button(this.game.world.centerX - 95, this.game.world.centerY + 193, 'button', this.loadMedium, this, 2, 1, 0);
 
 
-        hard = this.game.add.button(this.game.world.centerX - 95, 800, 'button', this.loadHard, this, 2, 1, 0);
+        hard = this.game.add.button(this.game.world.centerX - 95, this.game.world.centerY + 293, 'button', this.loadHard, this, 2, 1, 0);
 
 
         var style1 = { font: "28px Press Start 2P", fill: "#fff", align: "center"};
@@ -50,19 +50,19 @@ SpaceShooter.MenuState = {
         controlesMouse.addColor('#ffffff', 18);
 
         var seasy = { font: "16px Press Start 2P", fill: "#fff", align: "center"};
-        var teasy = this.game.add.text(this.game.world.centerX, 635, "Fácil", seasy);
+        var teasy = this.game.add.text(this.game.world.centerX, this.game.world.centerY + 128 , "Fácil", seasy);
         teasy.anchor.set(0.5);
         teasy.addColor('#7cfff2', 12);
         teasy.addColor('#ffffff', 18);
 
         var smedium = { font: "16px Press Start 2P", fill: "#fff", align: "center"};
-        var tmedium = this.game.add.text(this.game.world.centerX, 735, "Médio", smedium);
+        var tmedium = this.game.add.text(this.game.world.centerX, this.game.world.centerY + 228, "Médio", smedium);
         tmedium.anchor.set(0.5);
         tmedium.addColor('#7cfff2', 12);
         tmedium.addColor('#ffffff', 18);
 
         var shard = { font: "16px Press Start 2P", fill: "#fff", align: "center"};
-        var thard = this.game.add.text(this.game.world.centerX, 835, "Difícil", shard);
+        var thard = this.game.add.text(this.game.world.centerX, this.game.world.centerY + 328, "Difícil", shard);
         thard.anchor.set(0.5);
         thard.addColor('#7cfff2', 12);
         thard.addColor('#ffffff', 18);
