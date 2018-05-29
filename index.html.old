@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang=pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Phaser.js game demo" />
+    <title>Space-Shooter</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.min.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            font: 15px arial;
+            background-color: black;
+            font-family: 'Bungee Shade', cursive;
+        }
+        a{
+            text-decoration: none;
+        }
+        .botao {
+            font-size: 3em;
+            color: #ffffff;
+            padding: 13px 22px;
+            background: -moz-linear-gradient(
+                    top,
+                    #4a5494 0%,
+                    #4a5494);
+            background: -webkit-gradient(
+                    linear, left top, left bottom,
+                    from(#4a5494),
+                    to(#4a5494));
+            -moz-border-radius: 24px;
+            -webkit-border-radius: 24px;
+            border-radius: 24px;
+            border: 0px solid #ffffff;
+            -moz-box-shadow:
+                    0px 1px 3px rgba(255,255,255,0.5),
+                    inset 0px 0px 3px rgba(255,255,255,1);
+            -webkit-box-shadow:
+                    0px 1px 3px rgba(255,255,255,0.5),
+                    inset 0px 0px 3px rgba(255,255,255,1);
+            box-shadow:
+                    0px 1px 3px rgba(255,255,255,0.5),
+                    inset 0px 0px 3px rgba(255,255,255,1);
+            text-shadow:
+                    0px -1px 0px rgba(255,255,255,0.1),
+                    0px 1px 0px rgba(255,255,255,1);
+        }
+        .wrapper {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+        .texto{
+            font-family: 'Bangers', cursive;
+            color: #ffffff;
+            font-size: 1.6em;
+            margin: 3em;
+            width: 30%;
+        }
+        .todo{
+            height: 100%;
+            min-height: 100%;
+            margin-top: 7%;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<div class="todo">
+    <div class="wrapper">
+        <div class="texto">
+            <p>Sua base foi atacada. Você pode apenas fugir, o mais rápido possível, mas para isso você deve fazer o mais improvável</p>
+            <p>Vencer</p>
+            <p>Todos</p>
+            <p>Inimigos</p>
+            <p>Boa Sorte</p>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div>
+            <a href="jogo.html" class="botao">Começar</a>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="texto">
+            <p>Use as setas do teclado ou o mouse para movimentar para a direita ou esquerda sua nave</p>
+            <p>Aperte barra de espaço para atirar ou o botão esquerdo de seu mouse.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

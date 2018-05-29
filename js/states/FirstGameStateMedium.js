@@ -14,10 +14,10 @@ var shields;
 var score = 0;
 var scoreText;
 var greenEnemyLaunchTimer;
-var greenEnemySpacing = 1000;
+var greenEnemySpacing = 500;
 var blueEnemyLaunchTimer;
 var blueEnemyLaunched = false;
-var blueEnemySpacing = 2500;
+var blueEnemySpacing = 2000;
 var bossLaunchTimer;
 var bossLaunched = false;
 var bossBulletTimer = 0;
@@ -29,11 +29,11 @@ var style = { font: "28px Bungee Shade", fill: "#fff", boundsAlignH: "center", b
 var styleCenter = { font: "48px Bungee Shade", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" };
 var ACCLERATION = 600;
 var DRAG = 400;
-var MAXSPEED = 400;
+var MAXSPEED = 300;
 
 var SpaceShooter = SpaceShooter || {};
 
-SpaceShooter.FirstGameState = {
+SpaceShooter.FirstGameStateMedium = {
 
     preload:function ()
     {
@@ -143,31 +143,28 @@ SpaceShooter.FirstGameState = {
                     bossDeath.on = false;
                     youWin.visible = true;
                     youWin.alpha = 0;
-                    var fadeInYouWin = this.SpaceShooter.FirstGameState.add.tween(youWin);
+                    var fadeInYouWin = this.SpaceShooter.FirstGameStateMedium.add.tween(youWin);
                     fadeInYouWin.to({alpha: 1}, 1000, Phaser.Easing.Quintic.Out);
                     fadeInYouWin.onComplete.add(setResetHandlers);
                     fadeInYouWin.start();
                     greenEnemies.callAll('kill');
-                    this.SpaceShooter.FirstGameState.game.time.events.remove(greenEnemyLaunchTimer);
+                    this.SpaceShooter.FirstGameStateMedium.game.time.events.remove(greenEnemyLaunchTimer);
                     blueEnemies.callAll('kill');
                     blueEnemyBullets.callAll('kill');
-                    this.SpaceShooter.FirstGameState.game.time.events.remove(blueEnemyLaunchTimer);
+                    this.SpaceShooter.FirstGameStateMedium.game.time.events.remove(blueEnemyLaunchTimer);
                     boss.kill();
                     booster.kill();
-                    this.SpaceShooter.FirstGameState.game.time.events.remove(bossLaunchTimer);
+                    this.SpaceShooter.FirstGameStateMedium.game.time.events.remove(bossLaunchTimer);
 
                     blueEnemies.callAll('kill');
-                    this.SpaceShooter.FirstGameState.game.time.events.remove(blueEnemyLaunchTimer);
+                    this.SpaceShooter.FirstGameStateMedium.game.time.events.remove(blueEnemyLaunchTimer);
 
                     function setResetHandlers() {
-                        tapRestart = this.SpaceShooter.FirstGameState.input.onTap.addOnce(_restart, this);
+                        tapRestart = this.SpaceShooter.FirstGameStateMedium.input.onTap.addOnce(_restart, this);
                         spaceRestart = fireButton.onDown.addOnce(_restart, this);
 
                         function _restart() {
-                            tapRestart.detach();
-                            spaceRestart.detach();
-                            youWin.visible = false;
-                            this.SpaceShooter.FirstGameState.restart(this.SpaceShooter.FirstGameState);
+                            this.SpaceShooter.FirstGameStateEasy.game.state.start('MenuState');
                         }
                     }
                 });
@@ -189,9 +186,9 @@ SpaceShooter.FirstGameState = {
 
         boss.fire = function () {
             if (this.game.time.now > bossBulletTimer) {
-                var raySpacing = 3000;
-                var chargeTime = 1500;
-                var rayTime = 1500;
+                var raySpacing = 1500;
+                var chargeTime = 500;
+                var rayTime = 500;
 
                 function chargeAndShoot(side) {
                     ray = boss['ray' + side];
@@ -200,9 +197,9 @@ SpaceShooter.FirstGameState = {
                     ray.y = 80;
                     ray.alpha = 0;
                     ray.scale.y = 13;
-                    this.SpaceShooter.FirstGameState.game.add.tween(ray).to({alpha: 1}, chargeTime, Phaser.Easing.Linear.In, true).onComplete.add(function (ray) {
+                    this.SpaceShooter.FirstGameStateEasy.game.add.tween(ray).to({alpha: 1}, chargeTime, Phaser.Easing.Linear.In, true).onComplete.add(function (ray) {
                         ray.scale.y = 150;
-                        this.SpaceShooter.FirstGameState.game.add.tween(ray).to({y: -1500}, rayTime, Phaser.Easing.Linear.In, true).onComplete.add(function (ray) {
+                        this.SpaceShooter.FirstGameStateEasy.game.add.tween(ray).to({y: -1500}, rayTime, Phaser.Easing.Linear.In, true).onComplete.add(function (ray) {
                             ray.kill();
                         });
                     });
@@ -254,7 +251,7 @@ SpaceShooter.FirstGameState = {
         booster.makeParticles('blueEnemyBullet');
         booster.forEach(function (p) {
             p.crop({x: 120, y: 0, width: 45, height: 50});
-            p.anchor.x = this.SpaceShooter.FirstGameState.rnd.pick([1, -1]) * 0.95 + 0.5;
+            p.anchor.x = this.SpaceShooter.FirstGameStateMedium.rnd.pick([1, -1]) * 0.95 + 0.5;
             p.anchor.y = 0.75;
         });
         booster.setXSpeed(0, 0);
@@ -379,13 +376,13 @@ SpaceShooter.FirstGameState = {
             fadeInGameOver.start();
 
             function setResetHandlers() {
-                tapRestart = this.SpaceShooter.FirstGameState.input.onTap.addOnce(_restart, this);
+                tapRestart = this.SpaceShooter.FirstGameStateMedium.input.onTap.addOnce(_restart, this);
                 spaceRestart = fireButton.onDown.addOnce(_restart, this);
 
                 function _restart() {
                     tapRestart.detach();
                     spaceRestart.detach();
-                    this.SpaceShooter.FirstGameState.restart(this.SpaceShooter.FirstGameState);
+                    this.SpaceShooter.FirstGameStateMedium.restart(this.SpaceShooter.FirstGameStateMedium);
                 }
             }
         }
@@ -447,7 +444,7 @@ SpaceShooter.FirstGameState = {
         greenEnemies.setAll('scale.y', 0.5);
         greenEnemies.setAll('angle', 180);
         greenEnemies.forEach(function (enemy) {
-            this.SpaceShooter.FirstGameState.addEnemyEmitterTrail(enemy);
+            this.SpaceShooter.FirstGameStateMedium.addEnemyEmitterTrail(enemy);
             enemy.body.setSize(enemy.width * 3 / 4, enemy.height * 3 / 4);
             enemy.damageAmount = 20;
             enemy.events.onKilled.add(function () {
@@ -480,7 +477,7 @@ SpaceShooter.FirstGameState = {
         var spread = 60;
         var frequency = 70;
         var verticalSpacing = 70;
-        var numEnemiesInWave = 5;
+        var numEnemiesInWave = 8;
 
         for (var i = 0; i < numEnemiesInWave; i++) {
             var enemy = blueEnemies.getFirstExists(false);
@@ -529,8 +526,8 @@ SpaceShooter.FirstGameState = {
     launchBoss: function() {
         boss.reset(this.game.width / 2, -boss.height);
         booster.start(false, 1000, 10);
-        boss.health = 501;
-        bossBulletTimer = this.time.now + 5000;
+        boss.health = 901;
+        bossBulletTimer = this.time.now + 3000;
     },
 
     addEnemyEmitterTrail:function(enemy) {
@@ -579,7 +576,7 @@ SpaceShooter.FirstGameState = {
         score += enemy.damageAmount * 10;
         scoreText.setText('Score: ' + score);
 
-        greenEnemySpacing *= 0.9;
+        greenEnemySpacing *= 0.6;
 
         if (!blueEnemyLaunched && score > 1000) {
             blueEnemyLaunched = true;
@@ -592,7 +589,7 @@ SpaceShooter.FirstGameState = {
             blueEnemySpacing = 12000;
             this.time.events.add(2000, function () {
                 bossLaunched = true;
-                this.SpaceShooter.FirstGameState.launchBoss();
+                this.SpaceShooter.FirstGameStateMedium.launchBoss();
             });
         }
 
