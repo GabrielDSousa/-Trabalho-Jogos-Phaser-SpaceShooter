@@ -162,9 +162,10 @@ SpaceShooter.FirstGameStateEasy = {
                     function setResetHandlers() {
                         tapRestart = this.SpaceShooter.FirstGameStateEasy.input.onTap.addOnce(_restart, this);
                         spaceRestart = fireButton.onDown.addOnce(_restart, this);
-
                         function _restart() {
-                            this.SpaceShooter.FirstGameStateEasy.game.state.start('MenuState');
+                            tapRestart.detach();
+                            spaceRestart.detach();
+                            this.SpaceShooter.FirstGameStateEasy.restart(this.SpaceShooter.FirstGameStateEasy.game);
                         }
                     }
                 });
@@ -378,9 +379,10 @@ SpaceShooter.FirstGameStateEasy = {
             function setResetHandlers() {
                 tapRestart = this.SpaceShooter.FirstGameStateEasy.input.onTap.addOnce(_restart, this);
                 spaceRestart = fireButton.onDown.addOnce(_restart, this);
-
                 function _restart() {
-                    this.SpaceShooter.FirstGameStateEasy.game.state.start('MenuState');
+                    tapRestart.detach();
+                    spaceRestart.detach();
+                    this.SpaceShooter.FirstGameStateEasy.restart(this.SpaceShooter.FirstGameStateEasy.game);
                 }
             }
         }
@@ -667,5 +669,6 @@ SpaceShooter.FirstGameStateEasy = {
         greenEnemySpacing = 1000;
         blueEnemyLaunched = false;
         bossLaunched = false;
+        game.state.start('MenuState');
     }
 };
