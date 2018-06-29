@@ -1,4 +1,5 @@
 var SpaceShooter = SpaceShooter || {};
+var teste;
 var easy;
 var medium;
 var hard;
@@ -17,6 +18,9 @@ SpaceShooter.MenuState = {
         this.game.stage.backgroundColor = '#182d3b';
 
         background = this.game.add.tileSprite(0, 0, 2000, 2000, 'background');
+
+        //teste = this.game.add.button(this.game.world.centerX - 95, this.game.world.centerY, 'button', this.loadTeste(), this, 2, 1, 0);
+
 
         easy = this.game.add.button(this.game.world.centerX - 95, this.game.world.centerY + 93, 'button', this.loadEasy, this, 2, 1, 0);
 
@@ -49,6 +53,12 @@ SpaceShooter.MenuState = {
         controlesMouse.addColor('#7cfff2', 12);
         controlesMouse.addColor('#ffffff', 18);
 
+        var steste = { font: "16px Press Start 2P", fill: "#fff", align: "center"};
+        var tteste = this.game.add.text(this.game.world.centerX, this.game.world.centerY + 35 , "Teste", steste);
+        tteste.anchor.set(0.5);
+        tteste.addColor('#7cfff2', 12);
+        tteste.addColor('#ffffff', 18);
+
         var seasy = { font: "16px Press Start 2P", fill: "#fff", align: "center"};
         var teasy = this.game.add.text(this.game.world.centerX, this.game.world.centerY + 128 , "Fácil", seasy);
         teasy.anchor.set(0.5);
@@ -66,6 +76,12 @@ SpaceShooter.MenuState = {
         thard.anchor.set(0.5);
         thard.addColor('#7cfff2', 12);
         thard.addColor('#ffffff', 18);
+
+    },
+
+    loadTeste:function() {
+
+        this.state.start('TesteState');
 
     },
 

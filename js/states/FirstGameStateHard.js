@@ -311,7 +311,7 @@ SpaceShooter.FirstGameStateHard = {
         gameOver.setTextBounds(0, this.game.world.centerY, this.game.world.centerX*2 , 100);
         gameOver.visible = false;
 
-        youWin = this.game.add.text(0, 0, 'YOU WIN', styleCenter);
+        youWin = this.game.add.text(0, 0, 'Novo desafiante aparece !', styleCenter);
         youWin.setTextBounds(0, this.game.world.centerY, this.game.world.centerX*2 , 100);
         youWin.visible = false;
     },
@@ -672,6 +672,6 @@ SpaceShooter.FirstGameStateHard = {
         greenEnemySpacing = 1000;
         blueEnemyLaunched = false;
         bossLaunched = false;
-        game.state.start('MenuState');
+        game.state.start('TesteState');
     }
 };
