@@ -53,11 +53,11 @@ SpaceShooter.MenuState = {
         controlesMouse.addColor('#7cfff2', 12);
         controlesMouse.addColor('#ffffff', 18);
 
-        var steste = { font: "16px Press Start 2P", fill: "#fff", align: "center"};
-        var tteste = this.game.add.text(this.game.world.centerX, this.game.world.centerY + 35 , "Teste", steste);
-        tteste.anchor.set(0.5);
-        tteste.addColor('#7cfff2', 12);
-        tteste.addColor('#ffffff', 18);
+        // var steste = { font: "16px Press Start 2P", fill: "#fff", align: "center"};
+        // var tteste = this.game.add.text(this.game.world.centerX, this.game.world.centerY + 35 , "Teste", steste);
+        // tteste.anchor.set(0.5);
+        // tteste.addColor('#7cfff2', 12);
+        // tteste.addColor('#ffffff', 18);
 
         var seasy = { font: "16px Press Start 2P", fill: "#fff", align: "center"};
         var teasy = this.game.add.text(this.game.world.centerX, this.game.world.centerY + 128 , "Fácil", seasy);

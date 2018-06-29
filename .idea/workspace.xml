@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5525162-b9dc-4443-afb1-f72aaf8025f2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/states/FirstGameStateHard.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/states/FirstGameStateHard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/states/MenuGameState.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/states/MenuGameState.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,8 +62,8 @@
       <file leaf-file-name="MenuGameState.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/states/MenuGameState.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            <state relative-caret-position="714">
+              <caret line="55" column="8" selection-start-line="55" selection-start-column="11" selection-end-line="59" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -262,12 +258,12 @@
       <workItem from="1527544333393" duration="11811000" />
       <workItem from="1530214010521" duration="3814000" />
       <workItem from="1530270421532" duration="32554000" />
-      <workItem from="1530307738461" duration="551000" />
+      <workItem from="1530307738461" duration="700000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117458000" />
+    <option name="totallyTimeSpent" value="117607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -517,8 +513,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/states/MenuGameState.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        <state relative-caret-position="714">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="11" selection-end-line="59" selection-end-column="42" />
         </state>
       </provider>
     </entry>
